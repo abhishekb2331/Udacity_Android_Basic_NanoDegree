@@ -19,10 +19,9 @@ public class VpPagerAdapter extends FragmentPagerAdapter{
         super(fragmentManager);
         mFragmentList= new ArrayList<>();
         mQuestionList=QuestionList;
-        setFragments();
     }
 
-    private void setFragments() {
+    public void setFragments() {
         QuizFragment quizFragment;
         for(Question question : mQuestionList)
         {
@@ -32,6 +31,9 @@ public class VpPagerAdapter extends FragmentPagerAdapter{
         }
     }
 
+    public void addFragments(List<QuizFragment> FragmentList) {
+        mFragmentList=FragmentList;
+    }
     @Override
     public Fragment getItem(int position) {
         return mFragmentList.get(position);

@@ -19,6 +19,7 @@ public class QuizActivity extends AppCompatActivity implements ViewPager.OnPageC
     private List<Question> mQuestion;
     private ViewPager mViewPager;
     private VpPagerAdapter mVpPagerAdapter;
+    private static final String FRAGMENT_KEY="fragment";
     private FloatingActionButton mFAB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,8 +115,25 @@ public class QuizActivity extends AppCompatActivity implements ViewPager.OnPageC
         mFAB = (FloatingActionButton) findViewById(R.id.fab);
 
         mVpPagerAdapter = new VpPagerAdapter(getSupportFragmentManager(),mQuestion);
+        if(savedInstanceState !=null)
+        {
+            List<QuizFragment> mFragmentList = new ArrayList<>();
+            mFragmentList.add((QuizFragment) getSupportFragmentManager().getFragment(savedInstanceState,FRAGMENT_KEY+"0"));
+            mFragmentList.add((QuizFragment) getSupportFragmentManager().getFragment(savedInstanceState,FRAGMENT_KEY+"1"));
+            mFragmentList.add((QuizFragment) getSupportFragmentManager().getFragment(savedInstanceState,FRAGMENT_KEY+"2"));
+            mFragmentList.add((QuizFragment) getSupportFragmentManager().getFragment(savedInstanceState,FRAGMENT_KEY+"3"));
+            mFragmentList.add((QuizFragment) getSupportFragmentManager().getFragment(savedInstanceState,FRAGMENT_KEY+"4"));
+            mFragmentList.add((QuizFragment) getSupportFragmentManager().getFragment(savedInstanceState,FRAGMENT_KEY+"5"));
+            mFragmentList.add((QuizFragment) getSupportFragmentManager().getFragment(savedInstanceState,FRAGMENT_KEY+"6"));
+            mVpPagerAdapter.addFragments(mFragmentList);
+        }
+        else
+        {
+            mVpPagerAdapter.setFragments();
+        }
         mViewPager.setAdapter(mVpPagerAdapter);
         mViewPager.addOnPageChangeListener(this);
+        mViewPager.setOffscreenPageLimit(7);
         springIndicator.setViewPager(mViewPager);
 
         mFAB.setOnClickListener(this);
@@ -145,5 +163,17 @@ public class QuizActivity extends AppCompatActivity implements ViewPager.OnPageC
         }
 
         Toast.makeText(this,"Your Score is "+ String.valueOf(score),Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        getSupportFragmentManager().putFragment(outState,FRAGMENT_KEY+"0",mVpPagerAdapter.getItem(0));
+        getSupportFragmentManager().putFragment(outState,FRAGMENT_KEY+"1",mVpPagerAdapter.getItem(1));
+        getSupportFragmentManager().putFragment(outState,FRAGMENT_KEY+"2",mVpPagerAdapter.getItem(2));
+        getSupportFragmentManager().putFragment(outState,FRAGMENT_KEY+"3",mVpPagerAdapter.getItem(3));
+        getSupportFragmentManager().putFragment(outState,FRAGMENT_KEY+"4",mVpPagerAdapter.getItem(4));
+        getSupportFragmentManager().putFragment(outState,FRAGMENT_KEY+"5",mVpPagerAdapter.getItem(5));
+        getSupportFragmentManager().putFragment(outState,FRAGMENT_KEY+"6",mVpPagerAdapter.getItem(6));
     }
 }

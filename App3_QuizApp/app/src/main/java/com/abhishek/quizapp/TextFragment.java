@@ -2,6 +2,7 @@ package com.abhishek.quizapp;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ public class TextFragment  extends QuizFragment{
     private TextView mQuestionText;
     private EditText mAnswerText;
     public static final String QUESTION_KEY = "question";
+    public static final String ANSWER_KEY ="answer";
     public static TextFragment instance(Question question)
     {
         Bundle mBundle = new Bundle();
@@ -38,6 +40,10 @@ public class TextFragment  extends QuizFragment{
                 mQuestionText.setCompoundDrawablesWithIntrinsicBounds(0,mQuestion.getImage(),0,0);
             mQuestionText.setText(mQuestion.getQuestion());
         }
+        if(savedInstanceState!=null)
+        {
+            mAnswerText.setText(savedInstanceState.getString(ANSWER_KEY));
+        }
         return mView;
     }
 
@@ -46,5 +52,20 @@ public class TextFragment  extends QuizFragment{
         if(mAnswerText!=null)
             return mQuestion.checkAnswer(getActivity().getApplicationContext(),String.valueOf(mAnswerText.getText()));
         return false;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if(savedInstanceState!=null)
+        {
+            mAnswerText.setText(savedInstanceState.getString(ANSWER_KEY));
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(ANSWER_KEY,mAnswerText.getText().toString());
     }
 }

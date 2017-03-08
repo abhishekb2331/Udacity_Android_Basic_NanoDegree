@@ -2,6 +2,8 @@ package com.abhishek.quizapp;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,11 @@ public class RadioBtnFragment extends QuizFragment{
     private RadioButton mOption3;
     private RadioButton mOption4;
     public static final String QUESTION_KEY = "question";
+    public static final String OPTION1_KEY="option1";
+    public static final String OPTION2_KEY="option2";
+    public static final String OPTION3_KEY="option3";
+    public static final String OPTION4_KEY="option4";
+
     public static RadioBtnFragment instance(Question question)
     {
         Bundle mBundle = new Bundle();
@@ -61,9 +68,45 @@ public class RadioBtnFragment extends QuizFragment{
                 mOption4.setText(mQuestion.getOption4());
             }
         }
+
+        if(savedInstanceState!=null)
+        {
+            mOption1.setChecked(savedInstanceState.getBoolean(OPTION1_KEY,false));
+            mOption2.setChecked(savedInstanceState.getBoolean(OPTION2_KEY,false));
+            mOption3.setChecked(savedInstanceState.getBoolean(OPTION3_KEY,false));
+            mOption4.setChecked(savedInstanceState.getBoolean(OPTION4_KEY,false));
+        }
         return mView;
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if(mOption1!=null)
+        {
+            outState.putBoolean(OPTION1_KEY, mOption1.isChecked());
+        }
+        else
+            Log.v("CheckBoxFragment","Save option1 is null");
+        if(mOption2!=null)
+        {
+            outState.putBoolean(OPTION2_KEY, mOption2.isChecked());
+        }
+        else
+            Log.v("CheckBoxFragment","Save option2 is null");
+        if(mOption3!=null)
+        {
+            outState.putBoolean(OPTION3_KEY, mOption3.isChecked());
+        }
+        else
+            Log.v("CheckBoxFragment","Save option3 is null");
+        if(mOption4!=null)
+        {
+            outState.putBoolean(OPTION4_KEY, mOption4.isChecked());
+        }
+        else
+            Log.v("CheckBoxFragment","Save option4 is null");
+    }
     public boolean checkAnswer()
     {
         if(mOption1!=null && mOption1.isChecked())
@@ -83,5 +126,18 @@ public class RadioBtnFragment extends QuizFragment{
             return mQuestion.checkAnswer(mQuestion.getOption4());
         }
         return false;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.v("fragment","Activity Recreated");
+        if(savedInstanceState!=null)
+        {
+            mOption1.setChecked(savedInstanceState.getBoolean(OPTION1_KEY,false));
+            mOption2.setChecked(savedInstanceState.getBoolean(OPTION2_KEY,false));
+            mOption3.setChecked(savedInstanceState.getBoolean(OPTION3_KEY,false));
+            mOption4.setChecked(savedInstanceState.getBoolean(OPTION4_KEY,false));
+        }
     }
 }
