@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">TourGuide</string>
+    <string name="close">CLOSE DRAWER</string>
+    <string name="open">OPEN DRAWER</string>
+    <string name="welcome_to_mumbai">Welcome To Mumbai</string>
+    
+    <string name="IMPLocation1_TITLE">Gateway of India</string>
+    <string name="IMPLocation2_TITLE">Elephanta Caves</string>
+    <string name="IMPLocation3_TITLE">Sanjay Gandhi National Park</string>
+    <string name="IMPLocation4_TITLE">Worli Fort</string>
+
+    <string name="IMPLOCATION1_LOCATION">Mumbai</string>
+    <string name="IMPLOCATION2_LOCATION">Gharapuri</string>
+    <string name="IMPLOCATION3_LOCATION">Borivali East, Mumbai</string>
+    <string name="IMPLOCATION4_LOCATION">Mumbai</string>
+
+    <string name="IMPLOCATION1_DESC">The Gateway of India is a monument built during the 20th century in Mumbai City of Maharashtra state in Western India.It is located on the waterfront in the Apollo Bunder area in South Mumbai and overlooks the Arabian Sea.</string>
+    <string name="IMPLOCATION2_DESC">Elephanta Caves are a network of sculpted caves located on Elephanta Island, or Gharapuri in Mumbai Harbour, 10 kilometres to the east of the city of Mumbai in the Indian state of Maharashtra.</string>
+    <string name="IMPLOCATION3_DESC">Sanjay Gandhi National Park, formerly Borivali National Park, is a large protected area in the northern part of Mumbai city in Maharashtra State in India.</string>
+    <string name="IMPLOCATION4_DESC">The Worli Fort is a fort built by the British in Worli, Mumbai, India.The fort, built on the Worli hill, overlooked the Mahim Bay at a time the city was made up of just seven islands. It was used as a lookout for enemy ships and pirates.</string>
+
+
+    <string name="HOTEL1_TITLE">Oberoi Trident</string>
+    <string name="HOTEL2_TITLE">The Taj Mahal Palace Hotel</string>
+    <string name="HOTEL3_TITLE">Watson\'s Hotel</string>
+    <string name="HOTEL4_TITLE">Four Seasons Hotel</string>
+
+    <string name="HOTEL1_LOCATION">Nariman Point,Mumbai</string>
+    <string name="HOTEL2_LOCATION">Colaba , Mumbai</string>
+    <string name="HOTEL3_LOCATION">Kala Ghoda,Mumbai</string>
+    <string name="HOTEL4_LOCATION">Worli, Mumbai.</string>
+
+    <string name="HOTEL1_DESC">The Oberoi and Trident are two brands of five star hotels operated and sometimes owned by the Oberoi Hotels and Resorts located in several cities in India and across the world.</string>
+    <string name="HOTEL2_DESC">The Taj Mahal Palace Hotel is a "Heritage Grand" class five-star hotel located in the Colaba region of Mumbai, Maharashtra, India, next to the Gateway of India.</string>
+    <string name="HOTEL3_DESC">Watson\'s Hotel, now known as the Esplanade Mansion, is India\'s oldest surviving cast iron building.</string>
+    <string name="HOTEL4_DESC">Four Seasons Hotel, Mumbai is a five-star hotel and part of the Toronto-based Four Seasons luxury hotels and resorts.</string>
+
+
+    <string name="Museum1_TITLE">Cowasji Jehangir Hall</string>
+    <string name="Museum2_TITLE">Dr. Bhau Daji Lad Museum</string>
+    <string name="Museum3_TITLE">National Gallery of Modern Art</string>
+    <string name="Museum4_TITLE">Nehru Science Centre</string>
+
+    <string name="Museum1_LOCATION">Mumbai</string>
+    <string name="Museum2_LOCATION">Mumbai</string>
+    <string name="Museum3_LOCATION">Mumbai</string>
+    <string name="Museum4_LOCATION">Mumbai</string>
+
+    <string name="Museum1_DESC">The Cowasji Jehangir Hall is a museum of modern art and was part of the Institute of Science prior to 1996.</string>
+    <string name="Museum2_DESC">The Dr. Bhau Daji Lad Mumbai City Museum (formerly the Victoria and Albert Museum) is the oldest museum in Mumbai.</string>
+    <string name="Museum3_DESC">National Gallery of Modern Art hosts various exhibitions and art collections of famous artists, sculptors and different civilisations. </string>
+    <string name="Museum4_DESC">Nehru Science Center (NSC), Mumbai, is India\'s largest interactive science center</string>
+
+
+    <string name="Mall1_TITLE">Inorbit Mall</string>
+    <string name="Mall2_TITLE">Neptune Magnet Mall</string>
+    <string name="Mall3_TITLE">R City Mall</string>
+    <string name="Mall4_TITLE">Metro Junction Mall</string>
+
+    <string name="Mall1_LOCATION">Malad,Mumbai</string>
+    <string name="Mall2_LOCATION">Bhandup,Mumbai</string>
+    <string name="Mall3_LOCATION">Ghatkopar,Mumbai</string>
+    <string name="Mall4_LOCATION">Kalyan,Mumbai</string>
+
+    <string name="Mall1_DESC">Inorbit Mall, Malad was the first shopping mall to open under the Inorbit umbrella, in 2004. and is counted among the better planned malls in the city.</string>
+    <string name="Mall2_DESC">Neptune Magnet Mall is planned to be the first international standard shopping center in the city. The mall has a Family Entertainment center call GLEOTST.</string>
+    <string name="Mall3_DESC">The mall was opened in two phases, the total size of the first phase of the development is 750 thousand square feet.</string>
+    <string name="Mall4_DESC"> The mall was inaugurated in April 2008 and has an area of 750,000 square feet. Metro Junction Mall is one of the biggest in India.</string>
+    <string name="locations">Locations</string>
+    <string name="museum">Museum</string>
+    <string name="hotel">Hotel</string>
+    <string name="mall">Mall</string>
+</resources>

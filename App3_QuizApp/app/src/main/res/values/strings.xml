@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="Question1">Once installed on a device, each Android application lives in_______?</string>
+    <string name="Question1_Option1">Device memory</string>
+    <string name="Question1_Option2">External memory</string>
+    <string name="Question1_Option3">Security sandbox</string>
+    <string name="Question1_Option4">None of the above</string>
+
+    <string name="Question2">Parent class of Activity?</string>
+    <string name="Question2_Option1">Object</string>
+    <string name="Question2_Option2">Context</string>
+    <string name="Question2_Option3">ActivityGroup</string>
+    <string name="Question2_Option4">ContextThemeWrapper</string>
+
+    <string name="Question3">What are the Direct subclasses of Activity?</string>
+    <string name="Question3_Option1">AccountAuthenticatorActivity</string>
+    <string name="Question3_Option2">ActivityGroup</string>
+    <string name="Question3_Option3">ExpandableListActivity</string>
+    <string name="Question3_Option4">FragmentActivity</string>
+
+
+    <string name="Question4">Which of the  important device characteristics that you should consider as you design and develop your application?</string>
+    <string name="Question4_Option1">Screen size and density</string>
+    <string name="Question4_Option2">Input configurations</string>
+    <string name="Question4_Option3">Device features</string>
+    <string name="Question4_Option4">Platform Version</string>
+
+    <string name="Question5">Identify the Logo?</string>
+    <string name="Question5_Option1">Udacity</string>
+    <string name="Question5_Option2">CodePath</string>
+    <string name="Question5_Option3">Medium</string>
+    <string name="Question5_Option4">Vogella</string>
+
+    <string name="Question6">You can shut down an activity by calling its _______() method</string>
+    <string name="Question6_Option1">finish</string>
+
+    <string name="Question7">What is PlayStore\'s Logo?</string>
+</resources>

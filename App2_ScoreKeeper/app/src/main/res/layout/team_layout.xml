@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/TeamLabel"
+        style="@style/textLabelStyle"
+        tools:text="Team A" />
+
+    <TextView
+        android:id="@+id/ScoreLabel"
+        style="@style/textScoreStyle"
+        android:text="0"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textStyle"
+        android:text="@string/touch_down"/>
+    <Button
+        android:id="@+id/TouchDown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_6"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textStyle"
+        android:text="@string/field_goal"/>
+
+    <Button
+        android:id="@+id/FieldGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_3"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textStyle"
+        android:text="@string/extra_point"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/ExtraPoint1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/_1"/>
+
+    <Button
+        android:id="@+id/ExtraPoint2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/_2"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textStyle"
+        android:text="@string/safety"/>
+    <Button
+        android:id="@+id/Safety"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/_2"/>
+
+</LinearLayout>

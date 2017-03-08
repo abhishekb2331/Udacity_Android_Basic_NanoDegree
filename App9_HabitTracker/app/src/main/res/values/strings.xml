@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HabitTracker</string>
+    <string name="date">03-03-2017</string>
+    <string name="learn_new">Learning Sometbing New</string>
+    <string name="taking_medicine">Taking New Medicines</string>
+    <string name="walk_dog">Going For A Walk With Jojo</string>
+    <string name="walk">Going For A Walk</string>
+</resources>

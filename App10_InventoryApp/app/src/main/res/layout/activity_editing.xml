@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="80dp"
+                android:minWidth="88dp"
+                android:maxWidth="176dp"
+                android:maxHeight="160dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/add_image"
+                android:layout_marginBottom="8dp"/>
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/new_product"
+                android:hint="@string/item_name"
+                android:layout_marginBottom="8dp"/>
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/survey"
+                android:hint="@string/item_description"
+                android:layout_marginBottom="8dp" />
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/price_tag"
+                android:hint="@string/item_price"
+                android:layout_marginBottom="8dp" />
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/shopping_cart_loaded"
+                android:hint="@string/item_quantity"
+                android:layout_marginBottom="8dp" />
+            <EditText
+                android:id="@+id/sold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/sell"
+                android:hint="@string/item_sold"
+                android:layout_marginBottom="8dp" />
+            <EditText
+                android:id="@+id/supplier_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/user"
+                android:hint="@string/supplier_name"
+                android:layout_marginBottom="8dp" />
+            <EditText
+                android:id="@+id/supplier_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/phone"
+                android:hint="@string/supplier_phone"
+                android:layout_marginBottom="8dp" />
+            <EditText
+                android:id="@+id/supplier_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/supplier_email"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/email"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@drawable/bottom_navigation_view_selector"
+        app:itemTextColor="@drawable/bottom_navigation_view_selector"
+        app:menu="@menu/bottom_navigation_menu" />
+</LinearLayout>

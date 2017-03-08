@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NewsFeedApp</string>
+    <string name="noData">OOOPS SOMETHING WENT WRONG</string>
+</resources>

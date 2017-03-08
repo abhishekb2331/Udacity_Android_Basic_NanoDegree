@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/First"
+            android:title="@string/locations"
+            android:icon="@drawable/cathedral"/>
+        <item android:id="@+id/Second"
+            android:title="@string/museum"
+            android:icon="@drawable/museum"/>
+        <item android:id="@+id/Third"
+            android:title="@string/hotel"
+            android:icon="@drawable/hotel"/>
+        <item android:id="@+id/Fourth"
+            android:title="@string/mall"
+            android:icon="@mipmap/mall"/>
+    </group>
+</menu>
