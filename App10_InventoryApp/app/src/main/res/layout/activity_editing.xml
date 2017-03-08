@@ -13,93 +13,127 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:gravity="center_horizontal"
+            android:orientation="vertical"
             android:padding="16dp">
+
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="160dp"
+                android:maxWidth="176dp"
                 android:minHeight="80dp"
                 android:minWidth="88dp"
-                android:maxWidth="176dp"
-                android:maxHeight="160dp"
-                android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/add_image"
-                android:layout_marginBottom="8dp"/>
+                android:src="@drawable/add_image" />
+
             <EditText
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1"
+                android:layout_marginBottom="8dp"
                 android:drawableLeft="@drawable/new_product"
                 android:hint="@string/item_name"
-                android:layout_marginBottom="8dp"/>
+                android:inputType="text"
+                android:maxLines="1" />
+
             <EditText
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1"
+                android:layout_marginBottom="8dp"
                 android:drawableLeft="@drawable/survey"
                 android:hint="@string/item_description"
-                android:layout_marginBottom="8dp" />
+                android:inputType="text"
+                android:maxLines="1" />
+
             <EditText
                 android:id="@+id/price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:maxLines="1"
+                android:layout_marginBottom="8dp"
                 android:drawableLeft="@drawable/price_tag"
                 android:hint="@string/item_price"
-                android:layout_marginBottom="8dp" />
-            <EditText
-                android:id="@+id/quantity"
+                android:inputType="numberDecimal"
+                android:maxLines="1" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:maxLines="1"
-                android:drawableLeft="@drawable/shopping_cart_loaded"
-                android:hint="@string/item_quantity"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/quantity_dec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/minus"/>
+                <EditText
+                    android:id="@+id/quantity"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/shopping_cart_loaded"
+                    android:hint="@string/item_quantity"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
+                <ImageButton
+                    android:id="@+id/quantity_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/add"/>
+                <EditText
+                    android:id="@+id/modification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/modification_factor"
+                    android:inputType="numberDecimal"
+                    android:text="1"
+                    android:maxLines="1"/>
+            </LinearLayout>
+
             <EditText
                 android:id="@+id/sold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:maxLines="1"
+                android:layout_marginBottom="8dp"
                 android:drawableLeft="@drawable/sell"
                 android:hint="@string/item_sold"
-                android:layout_marginBottom="8dp" />
+                android:inputType="numberDecimal"
+                android:maxLines="1" />
+
             <EditText
                 android:id="@+id/supplier_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:maxLines="1"
+                android:layout_marginBottom="8dp"
                 android:drawableLeft="@drawable/user"
                 android:hint="@string/supplier_name"
-                android:layout_marginBottom="8dp" />
+                android:inputType="textPersonName"
+                android:maxLines="1" />
+
             <EditText
                 android:id="@+id/supplier_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:maxLines="1"
+                android:layout_marginBottom="8dp"
                 android:drawableLeft="@drawable/phone"
                 android:hint="@string/supplier_phone"
-                android:layout_marginBottom="8dp" />
+                android:inputType="phone"
+                android:maxLines="1" />
+
             <EditText
                 android:id="@+id/supplier_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="@string/supplier_email"
-                android:maxLines="1"
+                android:layout_marginBottom="8dp"
                 android:drawableLeft="@drawable/email"
-                android:layout_marginBottom="8dp" />
+                android:hint="@string/supplier_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1" />
         </LinearLayout>
     </ScrollView>
 

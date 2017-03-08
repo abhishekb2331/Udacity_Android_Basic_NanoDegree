@@ -9,4 +9,5 @@
     <string name="item_price">Item Price</string>
     <string name="item_description">Item Description</string>
     <string name="item_name">Item Name</string>
+    <string name="modification_factor">Factor</string>
 </resources>

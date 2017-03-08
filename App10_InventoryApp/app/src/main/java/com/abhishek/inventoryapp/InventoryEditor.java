@@ -30,6 +30,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -66,6 +67,7 @@ public class InventoryEditor extends AppCompatActivity implements LoaderManager.
     private EditText Supplier_Name;
     private EditText Supplier_Phone;
     private EditText Supplier_Email;
+    private EditText Modification_Quantity;
     private static final int LOADER_INIT=1;
 
     private TextWatcher TitletextWatcher;
@@ -95,7 +97,22 @@ public class InventoryEditor extends AppCompatActivity implements LoaderManager.
         Supplier_Name = (EditText) findViewById(R.id.supplier_name);
         Supplier_Phone = (EditText) findViewById(R.id.supplier_phone);
         Supplier_Email = (EditText) findViewById(R.id.supplier_email);
+        Modification_Quantity = (EditText) findViewById(R.id.modification);
 
+        ImageButton add_Quantity = (ImageButton) findViewById(R.id.quantity_add);
+        ImageButton dec_Quantity = (ImageButton) findViewById(R.id.quantity_dec);
+        add_Quantity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                add_To_Quantity();
+            }
+        });
+        dec_Quantity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dec_To_Quantity();
+            }
+        });
         TitletextWatcher= new ValidationTextWatcher(Title,VALID_TITLE_REGEX);
         DescriptiontextWatcher= new ValidationTextWatcher(Description,VALID_DESCRIPTION_REGEX);
         PricetextWatcher= new ValidationTextWatcher(Price,VALID_PRICE_REGEX);
@@ -152,6 +169,53 @@ public class InventoryEditor extends AppCompatActivity implements LoaderManager.
                 mContentChanged=true;
             }
         });
+    }
+
+    private void dec_To_Quantity() {
+        String str_modification=Modification_Quantity.getText().toString();
+        int modification;
+        if(str_modification!=null && !TextUtils.isEmpty(str_modification)) {
+            modification = Integer.valueOf(str_modification);
+            modification = (modification == 0) ? 1 : modification;
+        }
+        else {
+            modification=1;
+        }
+        String str_quantity=Quantity.getText().toString();
+        int quantity;
+        if(str_quantity!=null && !TextUtils.isEmpty(str_quantity)) {
+            quantity = Integer.valueOf(str_quantity);
+        }
+        else {
+            quantity=0;
+        }
+        if(quantity>0)
+        {
+            quantity = (modification >= quantity) ? 0 : (quantity-modification);
+        }
+        Quantity.setText(String.valueOf(quantity));
+    }
+
+    private void add_To_Quantity() {
+        String str_modification=Modification_Quantity.getText().toString();
+        int modification;
+        if(str_modification!=null && !TextUtils.isEmpty(str_modification)) {
+            modification = Integer.valueOf(str_modification);
+            modification = (modification == 0) ? 1 : modification;
+        }
+        else {
+            modification=1;
+        }
+        String str_quantity=Quantity.getText().toString();
+        int quantity;
+        if(str_quantity!=null && !TextUtils.isEmpty(str_quantity)) {
+            quantity = Integer.valueOf(str_quantity);
+        }
+        else {
+            quantity=0;
+        }
+        quantity = quantity+modification;
+        Quantity.setText(String.valueOf(quantity));
     }
 
     private class ValidationTextWatcher implements TextWatcher{
@@ -272,7 +336,7 @@ public class InventoryEditor extends AppCompatActivity implements LoaderManager.
         Matcher supplier_phoneMatcher;
         Matcher supplier_emailMatcher;
         if(TextUtils.isEmpty(title)|| TextUtils.isEmpty(description)|| TextUtils.isEmpty(supplier_name)||TextUtils.isEmpty(supplier_phone)|| TextUtils.isEmpty(supplier_email)
-                || TextUtils.isEmpty(price)|| TextUtils.isEmpty(quantity)||TextUtils.isEmpty(sold) || ImageUri==null) {
+                || TextUtils.isEmpty(price)|| TextUtils.isEmpty(quantity)||TextUtils.isEmpty(sold)) {
             titleMatcher=VALID_TITLE_REGEX.matcher(title);
             descriptionMatcher= VALID_DESCRIPTION_REGEX.matcher(description);
             priceMatcher=VALID_PRICE_REGEX.matcher(price);
@@ -296,7 +360,8 @@ public class InventoryEditor extends AppCompatActivity implements LoaderManager.
         contentValues.put(InventoryContractClass.INVENTORY_ITEM.COLUMN_SUPPLIER_NAME,supplier_name);
         contentValues.put(InventoryContractClass.INVENTORY_ITEM.COLUMN_SUPPLIER_PHONE,supplier_phone);
         contentValues.put(InventoryContractClass.INVENTORY_ITEM.COLUMN_SUPPLIER_EMAIL,supplier_email);
-        contentValues.put(InventoryContractClass.INVENTORY_ITEM.COLUMN_IMAGE,ImageUri);
+        if(ImageUri!=null)
+            contentValues.put(InventoryContractClass.INVENTORY_ITEM.COLUMN_IMAGE,ImageUri);
         return contentValues;
     }
     private void add_data(ContentValues contentValues)
