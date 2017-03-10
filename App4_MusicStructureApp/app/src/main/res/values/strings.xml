@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MusicStructureApp</string>
+    <string name="profile_activity_description">This activity shows all the available albums.If you don\'t have any albums it prompts you to enter a new song/album by clicking the Floating action button,which takes the user to a screen where the user can either search the device or download it from internet.When the user click\'s a particular album a new screen is opened where all the detail\'s regarding the album is provided. </string>
+    <string name="albumInfo_activity_description">This activity shows all the detail\'s regarding the album along with the list of songs present in the album.When the user click\'s the song it is played.When the user click\'s the name of album artist , a new activity is launched which shows all the album\'s made by the selected artist.UP navigation is provided which transition\'s the current activity to the Profile activity</string>
+    <string name="artistInfo_activity_description">This activity shows all the available albums for a particular artist.Clicking on the album lead\'s you to the activity dealing with the selected album\'s description and UP navigation is provided which transition\'s the current activity to the Profile activity</string>
+    <string name="addSongs_activity_description">This activity allows user to either load songs from device or download it from the Internet.</string>
+    <string name="add_from_the_device">Add songs from the device</string>
+    <string name="scan_device">scan the device</string>
+    <string name="add_songs_online">Add songs online</string>
+    <string name="album_by">Album By</string>
+    <string name="length">Length</string>
+    <string name="tracks">12 Tracks</string>
+    <string name="released">Released</string>
+    <string name="date">20 May 2015</string>
+    <string name="in_the_end">In The End</string>
+    <string name="song_by_linkin_park">Song by Linkin Park</string>
+    <string name="store_name">Store Name</string>
+    <string name="link">http://musicstore.com</string>
+    <string name="link_description">Hundreds of albums you can choose from.</string>
+</resources>
